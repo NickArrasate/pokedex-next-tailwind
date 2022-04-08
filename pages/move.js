@@ -32,7 +32,7 @@ export default function SingleMon({move}) {
               </TableRow>
               <TableRow>
                 <TableCol>Power:</TableCol>
-                <TableCol>{move.accuracy}</TableCol>
+                <TableCol>{move.power}</TableCol>
               </TableRow>
             </tbody>
           </table>

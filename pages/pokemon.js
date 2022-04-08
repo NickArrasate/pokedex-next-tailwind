@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import Link from "next/link";
+import Image from 'next/image'
 
 export default function SingleMon({pokemon}) {
   console.log(pokemon)
@@ -12,10 +13,28 @@ export default function SingleMon({pokemon}) {
           <h1 className="text-4xl mb-2 text-center capitalize">
               {pokemon.id}. {pokemon.name}
           </h1>
-          <img className="mx-auto" src={pokemon.image} alt={pokemon.name} />
-          <div className="flex">
-          <img className="mx-auto" src={pokemon.sprites.front_default} alt={pokemon.name} />
-          <img className="mx-auto" src={pokemon.sprites.front_shiny} alt={pokemon.name} />
+          <div className="mx-auto max-w-md text-center">
+            <Image
+              src={pokemon.image}
+              alt={pokemon.name}
+              width={200}
+              height={200}
+            />
+            <div className="flex justify-center ">
+              <Image
+                src={pokemon.sprites.front_default}
+                alt={pokemon.name}
+                width={120}
+                height={120}
+                className="first-sprite"
+              />
+              <Image
+                src={pokemon.sprites.front_shiny}
+                alt={pokemon.name}
+                width={120}
+                height={120}
+              />
+            </div>
           </div>
           <p>
               <span className="font-bold mr-2">Weight:</span> {pokemon.weight}

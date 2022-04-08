@@ -13,9 +13,6 @@ export default function Home({pokemons}) {
         <h1 className={`text-4xl mb-4 text-center`}>Pokedex</h1>
         <MonList pokemons={pokemons} genOffset={offset}/>
       </Layout>
-      <footer className={``}>
-
-      </footer>
     </div>
   )
 }

@@ -7,16 +7,16 @@ export default function SingleMon({move}) {
   console.log(move)
   const router = useRouter()
 
-  const styles = {
+  const styleCLasses = {
     tableRows: "bg-blue-100",
     tableCols: "p-4 first:border-r-1",
     flavorText: "p-4 mt-5"
   };
   function TableCol(props){
-    return <td className={styles.tableCols}>{props.children}</td>
+    return <td className={styleCLasses.tableCols}>{props.children}</td>
   }
   function TableRow(props){
-    return <tr className={styles.tableRows}>{props.children}</tr>
+    return <tr className={styleCLasses.tableRows}>{props.children}</tr>
   }
   return (
     <Layout title={move.name}>
@@ -37,7 +37,7 @@ export default function SingleMon({move}) {
               </TableRow>
             </tbody>
           </table>
-          <p className={styles.flavorText}>
+          <p className={styleCLasses.flavorText}>
           {move.flavor_text_entries[0].flavor_text}
           </p>
           <div className={'flex flex-auto'}>

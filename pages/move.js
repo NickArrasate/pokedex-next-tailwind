@@ -16,7 +16,7 @@ export default function SingleMon({move}) {
     return <td className={styleCLasses.tableCols}>{props.children}</td>
   }
   function TableRow(props){
-    return <tr className={styleCLasses.tableRows}>{props.children}</tr>
+    return <tr className={`other classes ${styleCLasses.tableRows}`}>{props.children}</tr>
   }
   return (
     <Layout title={move.name}>

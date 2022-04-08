@@ -8,7 +8,7 @@ function MonList(props) {
   return (
     <ul className='mx-auto grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-4 grid-flow-row p-5'>
       {pokemons.map((pokemon, index) => (
-        <li key={index} className={' max-w-lg rounded overflow-hidden shadow-lg bg-white'}>
+        <li key={index} className={' max-w-lg rounded overflow-hidden shadow-lg bg-white hover:shadow-none '}>
           <Link href={`/pokemon?id=${index + genOffset}`}>
           <a>
             <div className='flex flex-col items-center justify-around pb-4'>

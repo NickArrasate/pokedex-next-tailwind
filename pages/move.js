@@ -9,7 +9,8 @@ export default function SingleMon({move}) {
 
   const styles = {
     tableRows: "bg-blue-100",
-    tableCols: "p-4 first:border-r-1"
+    tableCols: "p-4 first:border-r-1",
+    flavorText: "p-4 mt-5"
   };
   function TableCol(props){
     return <td className={styles.tableCols}>{props.children}</td>
@@ -36,6 +37,9 @@ export default function SingleMon({move}) {
               </TableRow>
             </tbody>
           </table>
+          <p className={styles.flavorText}>
+          {move.flavor_text_entries[0].flavor_text}
+          </p>
           <div className={'flex flex-auto'}>
             <p className="w-1/2 mt-10 text-center hover:cursor-pointer">
               <span className="text-2xl underline" onClick={() => router.back()}>Back</span>
